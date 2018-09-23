@@ -1,0 +1,92 @@
+def start():
+	print("""Du bist eine kleine, flauschige Katze. Du hast Lust auf ein Abenteuer. Du tappst durch die angelehnte Tür ins Treppenhaus. Wohin gehst du?""")
+	print("1. Ich gehe nach oben.")
+	print("2. Ich gehe nach unten.")
+
+	richtung = input("> ")
+
+	if richtung == "1":
+		richtung1()
+
+	elif richtung == "2":
+		richtung_keller()
+	
+	else:
+		print("Das ist keine Option.")
+		start()
+
+def end(direction):
+	print(f"Etwas ängstlich läufst du die Treppe wieder {direction} und gehst zurück in die Wohnung. Du legst dich vor die Heizung. Genug Abenteuer für heute.")
+
+def marder1():
+	print("""Als du unter viel Gezeter den Dachboden betrittst, schaut dich eine ganze Bande von Mardern an. Zwei liegen in deinem Körbchen, einer sitzt auf deinem Kratzbaum und der letzte buddelt in deinem Katzenklo.""")
+	print("""Es scheint sich jedoch keiner von ihnen an deiner Gegenwart zu stören. Was machst du?""")
+	print("""1. Ich fauche weiter. Lauter. Dominanter!""")
+	print("""2. Ich laufe zu meinem Körbchen und lege den Kopf schief.""")
+			
+	dachboden = input("> ")
+        
+	if dachboden == "1":
+		print("""Die Marder gucken dich verwundert an. Der struppigste von allen verlässt seine Buddelkiste und kommt auf dich zu. Er knabbert dir vorsichtig am linken Ohr.""")
+		print("""Herzlichen Glückwunsch, du hast neue Freunde gefunden!""")
+            
+	elif dachboden == "2":
+		print("""Du stehst vor deinem Körbchen. Einer der Marder knabbert dir vorsichtig am rechten Ohr. Du beschließt, dich zu den beiden Mardern zu kuscheln.""")
+		print("""Herzlichen Glückwunsch, du hast neue Freunde gefunden!""")	
+			
+	else:
+		print("Das ist keine Option.")
+		marder1()
+		
+def richtung1():
+	print("""Du läufst mit deinen kurzen Katzenbeinchen flink die Treppe hoch. Vom Dachboden hörst du ein Muckern. Ein Marder hat sich in dein Revier geschlichen! Was tust du?""")
+	print("""1. Ich laufe laut fauchend mit buschigem Schwanz und Buckel auf den Dachboden.""")
+	print("""2. Ich bleibe auf der sicheren Seite und gehe doch lieber wieder in die Wohnung.""")
+    
+	marder = input("> ")
+    
+	if marder == "1":
+		marder1()
+			
+	elif marder == "2":
+		end("runter")
+        
+	else:
+		print("Das ist keine Option.")
+		richtung1()
+		
+def richtung_keller():
+		print("""Du begibst dich zum Keller. Dort angekommen siehst du einen kleinen Hamster in einer Transportbox. Sein Wasser ist leer, er hat keine Körner mehr und er guckt bedröppelt. Was tust du?""")
+		print("1. Ich versuche den Käfig mit meinen Patschepfoten zu öffnen.")
+		print("2. Irgendwie ist der Hamster mir nicht geheuer. Ich laufe wieder in die Wohnung zurück.")
+
+		keller = input("> ")
+
+		if keller == "1":
+			keller1()
+			
+		elif keller == "2":
+			end("hoch")
+			
+		else:
+			print("Das ist keine Option.")
+			richtung_keller()
+			
+def keller1():
+	print("""Mit etwas Geduld und filigranstem Kralleneinsatz öffnet sich die Tür der Transportbox. Der kleine Hamster schaut dich aus seinen Knopfaugen an. Er sieht struppig aus. Was tust du?""")
+	print("1. Ich hole ihm ein paar Haferflocken vom Regal und zeige ihm, wo er Wasser findet.")
+	print("2. Ich esse den Hamster mit einem Haps.")
+
+	hamster = input("> ")
+            
+	if hamster == "1":
+		print("""Er freut sich sichtlich über das Essen und deine Freundlichkeit! Er schnüffelt mit seiner Hamsterschnute in deinem Fell und schläft mit seinem Kopf auf deiner Pfote ein. Herzlichen Glückwunsch, du hast einen neuen Freund gefunden!""")
+
+	elif hamster == "2":
+		print("""Das war nicht sehr nett. Schäm dich.""")
+
+	else:
+		print("Das ist keine Option.")
+		keller1()
+	
+start()

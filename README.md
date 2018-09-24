@@ -1,1 +1,1 @@
-Eine Ansammlung von kleinen Projekten, die zur Übung dienen.
+Eine Ansammlung von kleinen Projekten, die zur Übung dienen. Python

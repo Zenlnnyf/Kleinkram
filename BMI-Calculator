@@ -1,0 +1,19 @@
+print("Hi there! \nThis is a BMI-calculator.")
+
+
+name = input("\nWhat's your name?: ")
+gewicht = float(input("How much do you weigh? (in kg): "))
+größe = float(input("How tall are you? (in m): "))
+
+print(f"\nOkay {name}, so you're {größe}m tall and you weigh {gewicht} kilograms.")
+
+bmi = round(gewicht / (größe * größe), 1)
+
+if bmi <= 19:
+    print(f"Your BMI is {bmi}, which means you're underweight.")
+if bmi > 19 and bmi <= 25:
+    print(f"Your BMI is {bmi}, which means you have normal weight.")
+if bmi > 25:
+    print(f"Your BMI is {bmi}, which means you're overweight.")
+    
+print("\nGood bye!")

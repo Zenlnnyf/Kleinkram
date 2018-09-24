@@ -1,0 +1,55 @@
+from sys import exit
+
+def kuchen():
+	print("Hi, hier gibts Kuchen.")
+	exit(0)
+	
+	
+def magierbär():
+	print("""Du ziehst den Waschbären an seinem geringelten Schwanz aus der Tonne. Er schaut dich verdutzt an. Du schaust verdutzt zurück. Du erwartest schon fast, dass er dich gleich angreift, aber tatsächlich bedankt er sich! \n
+	'Danke, lieber Mensch! Das war nett von dir. Ich war doch in einer misslichen Lage. Meine Nase steckte in einem Puddingbecher fest. Wer weiß, wie lange ich dort noch hätte verweilen müssen, wenn du nicht gekommen wärst.
+	Aber zum Glück warst du ja da! Als Dank erfülle ich dir einen Wunsch! Was immer du möchtest! Du musst es nur sagen!'
+	""")
+	wunsch = input("> ")
+	print(f"'{wunsch}? Na klar! So soll es sein!'")
+	print("""Der kleine Müllpanda murmelt einen Zauberspruch in seine Schnurrhaare und gestikuliert wild mit seinen kleinen Patschepfoten herum... Bis sich ein Ball aus Licht formt, der in bunten Farben pulsiert.
+		Dein Wunsch hat sich erfüllt!
+		Du bist überglücklich und gehst nach Hause.
+		""")
+	exit(0)
+
+	
+def waschbär():
+	print("Du entscheidest dich für die rechte Gasse. Sie ist dunkel und an ihrem Ende stehen Mülltonnen. Du hörst ein Rascheln und siehst ......... \n\n\n .......... einen Waschbären! Er steckt bis zum Po kopfüber in einer der Tonnen und braucht offensichtlich Hilfe. Was tust du? Helfen oder gehen?")
+	
+	tonne = input("> ")
+	
+	if tonne == "helfen":
+		magierbär()
+		
+	elif  tonne == "gehen":
+		print("Du gehst zurück, denn du möchtest dich nicht mit Tollwut anstecken. Verständlich.")
+		start()
+	
+	else:
+		print("Das hab ich nicht verstanden.")
+		waschbär()
+	
+	
+def start():
+	print("Du stehst zwischen zwei Gassen. Eine geht nach rechts ab und die andere nach links. In welche gehst du? Rechts oder links?")
+	
+	gasse = input("> ")
+	
+	if gasse == "rechts":
+		waschbär()
+		
+	if gasse == "links":
+		kuchen()
+	
+	else:
+		print("In diese Richtung geht es nicht.")
+		start()
+
+		
+start()
